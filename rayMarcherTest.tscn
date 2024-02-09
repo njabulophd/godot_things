@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://c55uv774iulh2"]
+
+[ext_resource type="Shader" path="res://reimarch.gdshader" id="1_66tki"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_sb65n"]
+shader = ExtResource("1_66tki")
+shader_parameter/fov = 90.0
+shader_parameter/cameraPos = Vector3(0, 0, 5)
+shader_parameter/front = Vector3(0, 0, -1)
+shader_parameter/up = Vector3(0, 1, 0)
+shader_parameter/MAX_STEPS = 100
+shader_parameter/MAX_DIST = 100.0
+shader_parameter/MIN_HIT_DIST = 1e-05
+
+[node name="Node" type="Node"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="Control"]
+material = SubResource("ShaderMaterial_sb65n")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
