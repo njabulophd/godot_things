@@ -4,13 +4,21 @@
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_sb65n"]
 shader = ExtResource("1_66tki")
-shader_parameter/fov = 90.0
+shader_parameter/fov = 60.0
 shader_parameter/cameraPos = Vector3(0, 0, 5)
 shader_parameter/front = Vector3(0, 0, -1)
 shader_parameter/up = Vector3(0, 1, 0)
 shader_parameter/MAX_STEPS = 100
-shader_parameter/MAX_DIST = 100.0
+shader_parameter/MAX_DIST = 20.0
 shader_parameter/MIN_HIT_DIST = 1e-05
+shader_parameter/globalAmbient = 0.01
+shader_parameter/globalDiffuse = 1.0
+shader_parameter/globalSpecular = 0.2
+shader_parameter/globalSpecularExponent = 64.0
+shader_parameter/lightPos = Vector3(-2, 5, 3)
+shader_parameter/lightColor = Vector3(0.9, 0.9, 0.68)
+shader_parameter/ambientColor = Vector3(1, 1, 1)
+shader_parameter/DERIVATIVE_STEP = 1.0
 
 [node name="Node" type="Node"]
 
